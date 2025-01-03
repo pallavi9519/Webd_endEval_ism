@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('Fru.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .signin-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .signin-container h1 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        .signin-container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .signin-container button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background: #6a11cb;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .signin-container button:hover {
+            background: #2575fc;
+        }
+
+        .signin-container a {
+            display: block;
+            margin-top: 15px;
+            color: #6a11cb;
+            text-decoration: none;
+        }
+
+        .signin-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="signin-container">
+        <h1>Sign In</h1>
+        <form id="loginForm">
+            <input type="email" id="loginEmail" placeholder="Email" required>
+            <input type="password" id="loginPassword" placeholder="Password" required>
+            <button type="submit">Sign In</button>
+            <button id="GG" class="GG">Login By Google</button>
+        </form>
+        <a href="#">Forgot your password?</a>
+        <a href="log.html">Don't have an account? Sign up</a>
+    </div>
+    <script defer type="module" src="script.js"></script>
+</body>
+</html>

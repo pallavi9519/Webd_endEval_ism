@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    @font-face { 
+      font-family:"Juicy";
+       src: url('Juicy.ttf'); 
+    } 
+      *{
+        font-family: "Press Start 2P", serif;
+      }
+
+    canvas {
+      font-family: 'Juicy';
+      position: absolute;
+      top: 130px;
+      left: 0px; 
+      right: 0px;
+      margin: auto;
+    }
+    canvas:hover{
+    cursor:pointer;
+  }
+    h1 {
+      font-family: 'Juicy';
+      position: absolute;
+      text-align: center;
+      color: coral;
+      left: 0px; 
+      right: 0px;
+      padding-top: 0%;
+      font-size: 350%;
+      letter-spacing: -2px;
+      text-shadow: 0 1px 0px #FFFFFF, 1px 0 0px #FFFFFF, 1px 2px 1px #FFFFFF, 2px 1px 1px #FFFFFF, 2px 3px 2px #8B0000, 3px 2px 2px #8B0000, 3px 4px 2px #8B0000, 4px 3px 3px #8B0000, 4px 5px 3px #8B0000, 5px 4px 2px #8B0000, 5px 6px 2px #8B0000, 6px 5px 2px #8B0000, 6px 7px 1px #8B0000, 7px 6px 1px #8B0000, 7px 8px 0px #8B0000, 8px 7px 0px #8B0000; 
+    }
+
+    html {
+      background: url(Images/sfondo.png);
+      background-repeat: repeat;
+      background-size: 300px 300px;
+      background-position: center;
+    }
+    .container ul{
+  display: flex;
+  list-style: none;
+}
+li a{
+  padding: 10px;
+  text-decoration: none;
+  color: #FFFFFF;
+ font-size:20px ;
+}
+#signLink{
+  background-color: rgb(6, 6, 98);
+  border-radius: 4px;
+  padding:10px ;
+  margin: 10px;
+}
+#logLink{
+  background-color: rgb(6, 6, 98);
+  border-radius: 4px;
+  padding:10px ;
+  margin: 10px;
+}
+  </style>
+
+<body>
+  <h1>
+    <span style='color: #ad1116'>F</span>
+    <span style='color: #2f9a3b'>r</span>
+    <span style='color: #ffd300'>u</span>
+    <span style='color: #4e2765'>i</span>
+    <span style='color: #9bc33c'>t</span>
+    <span style='color: #2f9a3b'>N</span>
+    <span style='color: #ffd300'>i</span>
+    <span style='color: #4e2765'>n</span>
+    <span style='color: #9bc33c'>j</span>
+    <span style='color: #ad1116'>a</span>
+
+  </h1>
+  <div class="container">
+    <ul>
+    <li id="signLink"><a href="sign.html">Sign in</a></li>
+    <li id="logLink"><a href="log.html">Sign up</a></li>
+  </ul>
+  </div> 
+  <canvas id="myCanvas" width="640" height="360"></canvas>
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBOmQht6U5N0SZk0WVbBeUTnFZZRKEPNC0",
+      authDomain: "fruit-ninja-game-c6a3c.firebaseapp.com",
+      projectId: "fruit-ninja-game-c6a3c",
+      storageBucket: "fruit-ninja-game-c6a3c.firebasestorage.app",
+      messagingSenderId: "190841899975",
+      appId: "1:190841899975:web:9795ff4016d9d9054e27e2",
+      measurementId: "G-DS0LQYD7HF"
+    };
+  
+    // Initialize Firebase    
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <script src="fruitspawner.js"></script>
+</body>
+</html>
