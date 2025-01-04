@@ -369,9 +369,6 @@ class Hearts {
             lifes += 1;
             addedlife = true;
          }
-         if (sliced==false && this.y > 380 && addedlife==false){
-            lifes-=1;
-         }
          this.x += dx;
          gravity += 0.1;
          this.y += dy + gravity;
