@@ -113,37 +113,7 @@ const startSound = new Audio("sound/start.mp3");
 const throwSound = new Audio("sound/throw.mp3");
 const overSound = new Audio("sound/over.mp3");
 var overSoundPlayed=false;
-class Particle {
-   constructor(x, y, color) {
-     this.x = x;
-     this.y = y;
-     this.radius = randomFloat(2, 5);
-     this.color = color;
-     this.vx = randomFloat(-3, 3);
-     this.vy = randomFloat(-3, 3);
-     this.life = 1; // Opacity
-     this.decay = randomFloat(0.01, 0.05);
-   }
- 
-   update() {
-     this.x += this.vx;
-     this.y += this.vy;
-     this.life -= this.decay;
-   }
- 
-   draw() {
-     ctx.beginPath();
-     ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
-     ctx.fillStyle = `rgba(${this.color}, ${this.life})`;
-     ctx.fill();
-     ctx.closePath();
-   }
- }
- function createParticles(x, y, color) {
-   for (let i = 0; i < 10; i++) {
-     particles.push(new Particle(x, y, color));
-   }
- }
+
 //class for fruits
 class Apples {
    constructor(x, y) {
