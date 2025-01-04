@@ -426,6 +426,10 @@ function animate(time){
             startSound.volume=0.3;
          }
       }
+       if (appleVisible==true) {
+         c.drawImage(applemenu, MenuApplesX[0], MenuApplesY[0]-2, MenuApplesDim, MenuApplesDim);
+         c.drawImage(applemenu, MenuApplesX[1], MenuApplesY[1]-2, MenuApplesDim, MenuApplesDim);
+      }
        if(mouseX > buttonsX[1] && mouseX < buttonsX[1] + buttonsWidth[1] && mouseY > buttonsY[1] && mouseY < buttonsY[1] + buttonsHeight[1]){
          appleVisible = true;
          MenuApplesX[0]= buttonsX[1] - MenuApplesDim;
